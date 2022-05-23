@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Meaning Cloud Fectching</title>
+    <link rel="stylesheet" href="/styles/resets.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+
+<body>
+  <header>
+        <div class="">
+            <a href='https://pngtree.com/so/creative'><img src="images/logo1.png" width="100px" height="100px" />
+                creative png from pngtree.com/</a>
+        </div>
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a class="button">Home</a></li>
+                <li><a class="button">Contact</a></li>
+                <li><a class="button">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <form id="main-form" onsubmit="return Client.submitHandler(event)">
+                <input id="input-url" type="text" name="input-url" value="" class="input" placeholder="Name">
+                <input type="submit" id="submit-button" value="submit" onclick="return Client.submitHandler(event)"
+                    onsubmit="return Client.submitHandler(event)">
+            </form>
+        </section>
+
+        <section class="error">
+            <h1>Some Error happened</h1>
+            <span id="error-descroption"></span>
+
+        </section>
+
+        <section class="form">
+
+            <div id="results">
+                <strong>Form Results:</strong>
+                <ul class="list-semantic">
+                    <li>
+                        <div id="subjectivity"></div>
+                    </li>
+                    <li>
+                        <div id="polarity"></div>
+                    </li>
+                    <li>
+                        <div id="irony"></div>
+                    </li>
+                    <li>
+                        <div id="agreement"></div>
+                    </li>
+                    <li>
+                        <div id="urlValidity"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="errors-feedback"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+</body>
+
+</html>

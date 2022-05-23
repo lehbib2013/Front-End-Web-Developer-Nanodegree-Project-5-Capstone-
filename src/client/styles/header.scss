@@ -1,0 +1,323 @@
+#checkbtn {
+  font-size: 3rem;
+  color:black;
+  
+  line-height: 80px;
+  margin-left:10px;
+  display:none;
+}
+#check {
+  display:inline;
+}
+@media(min-width: 300px) and (max-width: 599px) {
+
+  header {
+    height:6.25rem;
+    position:relative;
+    z-index: 1;
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: flex-start;
+    img {
+      width :10vw;
+    }
+   // padding: 0.3em 0.2em;
+    .logo {
+     
+      text-align: left;
+      display:flex;
+      flex-direction:column;
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 3.125rem;
+      max-height: 3.125rem;
+      div p a {
+        margin-top: 0.312rem;
+        padding-top: 0.312rem;
+      }
+    }
+    .menu-container {
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+      align-content: flex-start;
+      float:right;
+      #checkbtn {
+        position: absolute;
+        display:inline-block;
+        margin-right:0.3rem;
+      }
+      #check {
+        display:inline;
+      }
+      #check:checked ~ .menu  { 
+
+        position: absolute;
+        margin-top:3.2rem !important;
+        margin-right:0.3rem;
+        width:10wv;
+        display:block;
+        list-style-type: none;
+        // margin: 0.625em;
+       //  padding: 0.3em;
+       // overflow-y: hidden;
+         float:right;
+         text-align:right;
+         li {
+          
+          margin-top: 0.625rem;
+          position: relative;
+         //  float: right;
+           padding-top:0.125rem;
+           display:block;
+           border:2px red solid;
+           border-radius: 5px;
+           background-color: cornsilk;
+         }
+   
+         li a {
+          width:100%;
+           display: inline;
+          
+           color: blue;
+           text-align: center;
+           //padding-top: 0.874em 1em;
+           text-decoration: none;
+         }
+   
+         li a:hover {
+           background-color: rgba(240, 232, 9, 0.963);
+         }
+      }
+
+
+      input[type="checkbox"]:not(:checked) ~ .menu {
+        display:none;
+     
+      }
+  
+  
+    }
+  }
+}
+@media (min-width: 600px) {
+  header {
+    height:6.25rem;
+    position:relative;
+    z-index: 1;
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: flex-start;
+    img {
+      width :10vw;
+    }
+   // padding: 0.3em 0.2em;
+    .logo {
+     
+      text-align: left;
+      display:flex;
+      flex-direction:column;
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 3.125rem;
+      max-height: 3.125rem;
+      div p a {
+        margin-top: 0.312rem;
+        padding-top: 0.312rem;
+      }
+    }
+    .menu-container {
+      display:flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-end;
+      float:right;
+      #checkbtn {
+        position: absolute;
+        display:none;
+      }
+      #check {
+        display:none;
+      }
+      .menu  { 
+         position: relative;
+         margin-top:0.12rem !important;
+         display:inline-block;
+         list-style-type: none;
+         text-align:right;
+         li {
+          margin-right: 0.2rem;
+          position: relative;
+          
+           display:inline-block;
+           border:2px red solid;
+           border-radius: 5px;
+           background-color: cornsilk;
+         }
+   
+         li a {
+           width:100%;
+           display: inline;
+           color: blue;
+           text-align: right;
+           text-decoration: none;
+         }
+   
+         li a:hover {
+           background-color: rgba(240, 232, 9, 0.963);
+         }
+      }
+
+    }
+  }
+}
+@media(min-width: 600px) and (max-width: 900px) {
+  header {
+    height:6.25rem;
+    position:relative;
+    z-index: 1;
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: flex-start;
+    img {
+      width :10vw;
+    }
+   // padding: 0.3em 0.2em;
+    .logo {
+     
+      text-align: left;
+      display:flex;
+      flex-direction:column;
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 3.125rem;
+      max-height: 3.125rem;
+      div p a {
+        margin-top: 0.312rem;
+        padding-top: 0.312rem;
+      }
+    }
+    .menu-container {
+      display:flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-end;
+      float:right;
+      #checkbtn {
+        position: absolute;
+        display:none;
+      }
+      #check {
+        display:none;
+      }
+      .menu  { 
+         position: relative;
+         margin-top:0.12rem !important;
+         display:inline-block;
+         list-style-type: none;
+         text-align:right;
+         li {
+          margin-right: 0.2rem;
+          position: relative;
+          
+           display:inline-block;
+           border:2px red solid;
+           border-radius: 5px;
+           background-color: cornsilk;
+         }
+   
+         li a {
+           width:100%;
+           display: inline;
+           color: blue;
+           text-align: right;
+           text-decoration: none;
+         }
+   
+         li a:hover {
+           background-color: rgba(240, 232, 9, 0.963);
+         }
+      }
+
+    }
+  }
+}
+@media(min-width: 901px) {
+  header {
+    height:6.25rem;
+    position:relative;
+    z-index: 1;
+    width:100vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: flex-start;
+    img {
+      width :10vw;
+    }
+   // padding: 0.3em 0.2em;
+    .logo {
+     
+      text-align: left;
+      display:flex;
+      flex-direction:column;
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 3.125rem;
+      max-height: 3.125rem;
+      div p a {
+        margin-top: 0.312rem;
+        padding-top: 0.312rem;
+      }
+    }
+    .menu-container {
+      display:flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-end;
+      float:right;
+      #checkbtn {
+        position: absolute;
+        display:none;
+      }
+      #check {
+        display:none;
+      }
+      .menu  { 
+         position: relative;
+         margin-top:0.12rem !important;
+         display:inline-block;
+         list-style-type: none;
+         text-align:right;
+         li {
+          margin-right: 0.2rem;
+          position: relative;
+           display:inline-block;
+           border:2px red solid;
+           border-radius: 5px;
+           background-color: cornsilk;
+         }
+   
+         li a {
+           width:100%;
+           display: inline;
+           color: blue;
+           text-align: right;
+           text-decoration: none;
+         }
+   
+         li a:hover {
+           background-color: rgba(240, 232, 9, 0.963);
+         }
+      }
+
+    }
+  }
+}
+

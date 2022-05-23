@@ -1,0 +1,769 @@
+@import './variables.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+   // min-height: 100vh;
+    background-color: $backgroud_color;
+}
+main {
+    a {
+        font-size: 0.6em;
+    }
+}
+@media(min-width: 300px) and (max-width: 599px) {
+    body {
+        font-size: 1.6rem;
+    }
+    section {
+        margin: 0px;
+        padding: 0px;
+        #trips-fields {
+            border:black 2px solid;
+            padding:1em;
+            legend {
+                //margin-left: 25rem;
+                #added-trips {
+                    background-color: aquamarine;
+                }
+            }
+            .trips-fields-inputs {
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   align-content: flex-start;
+                   #trip-number {
+                    width:9.3rem;
+                   }
+                   
+            }
+        }
+        #trips-fields-list {
+            border:black 2px solid;
+            padding:0.625rem;
+        }
+        #city {
+            width:12.5rem;
+           }
+           #departure {
+            width:12.5rem;
+           }
+        #add-trip-btn {
+          background-color: blue;
+          color:white;
+          font-size: 0.87rem;
+          font-family: 'Courier New', Courier, monospace;
+          &:hover {
+                cursor: pointer;
+                background-color: darkorange;
+                   }
+        }
+        #add-segment-btn {
+            background-color: blue;
+            color:white;
+            font-size: 0.87rem;
+            font-family: 'Courier New', Courier, monospace;
+    
+        }
+        #list-trips {
+           
+            .trip-details-item {
+                margin: 0;
+                
+                .trip-wrapper {
+                    $length-trip: width;
+                    border-radius: 0.31rem;
+                    border: red 2px dotted;
+                    padding:0.31rem;
+                    display: flex;
+                    width:100%;
+                    flex-direction: column;
+                    align-content:space-between;
+                    align-items: flex-start;
+                    span.total {
+                        border-radius: 0.31rem;
+                        
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        background-color: rgba(51, 51, 49, 0.55);
+                        color: rgb(247, 240, 240);
+                        float: right;
+                        margin-left: auto; 
+                        margin-right: 0px;
+                        height:1.25rem;
+                        width:1.25rem;
+                        text-align: center;
+                    }
+                    .segment-wrapper {
+                        display: flex;
+                        padding-left: 0.625rem;
+                        padding-right: 0.625rem;
+                        flex-direction: column;
+                        align-content:space-between;
+                        align-items: center;
+                        .segment-header {
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            width:100%;
+                            height:3.25rem;
+                            background-color: blanchedalmond;
+                        }
+                        .segment-body {
+                            display: flex;
+                            flex-direction: row;
+                            align-content: space-between;
+                            align-items: flex-start;
+                            background-color: white;
+                        }
+                        .weather-start-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: #3399ff;
+                                padding: 0.625rem;
+                                li {
+                                    background: #cce5ff;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            }
+                            
+                        }
+                        .weather-final-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            margin-left: 0.18rem;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: mistyrose;
+                                padding: 0.625rem;
+                                li {
+                                    background: #f5cea8;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            };
+                            img {
+                                width:"5.62rem";
+                                height:"5.62rem";
+                            }
+                            
+                        }
+    
+                    }
+                }
+                
+                
+            }
+        }
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    
+        section {
+    
+                }
+    }
+    
+    section {
+        width: 90vw;
+        margin: 0.31rem auto;
+    
+        strong {
+            font-size: 2.1rem;
+            color: darkblue;
+               }
+          }
+    
+    .container {
+        margin-top:0.3rem;
+        position:relative;
+        z-index: 2;
+        display: flex;
+        border: 0px;
+        padding: 0.31rem;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'MyFont';
+        
+        //background: url('./icon.png');
+    }
+     
+    
+}
+@media (min-width: 600px) {
+    body {
+        font-size: 1.6rem;
+    }
+    section {
+        margin: 0px;
+        padding: 0px;
+        #trips-fields {
+            border:black 2px solid;
+            padding:1em;
+            legend {
+                //margin-left: 25rem;
+                #added-trips {
+                    background-color: aquamarine;
+                }
+            }
+            .trips-fields-inputs {
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   align-content: flex-start;
+                   #trip-number {
+                    width:9.3rem;
+                   }
+                   
+            }
+        }
+        #trips-fields-list {
+            border:black 2px solid;
+            padding:0.625;
+        }
+        #city {
+            width:12.5rem;
+           }
+           #departure {
+            width:12.25rem;
+           }
+        #add-trip-btn {
+          background-color: blue;
+          color:white;
+          font-size: 0.87rem;
+          font-family: 'Courier New', Courier, monospace;
+          &:hover {
+                cursor: pointer;
+                background-color: darkorange;
+                   }
+        }
+        #add-segment-btn {
+            background-color: blue;
+            color:white;
+            font-size: 0.87rem;
+            font-family: 'Courier New', Courier, monospace;
+    
+        }
+        #list-trips {
+           
+            .trip-details-item {
+                margin: 0;
+                
+                .trip-wrapper {
+                    $length-trip: width;
+                    border-radius: 0.31rem;
+                    border: red 2px dotted;
+                    padding:0.31rem;
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    align-content:space-between;
+                    align-items: center;
+                    span.total {
+                        border-radius: 0.31rem;
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        background-color: rgba(51, 51, 49, 0.55);
+                        color: rgb(247, 240, 240);
+                        float: right;
+                        margin-left: auto; 
+                        margin-right: 0px;
+                        height:1.25rem;
+                        width:1.25rem;
+                        text-align: center;
+                    }
+                    .segment-wrapper {
+                        display: flex;
+                        padding-left: 0.625rem;
+                        padding-right: 0.625rem;
+                        flex-direction: column;
+                        align-content:space-between;
+                        align-items: center;
+                        .segment-header {
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            width:100%;
+                            height:3.25rem;
+                            background-color: blanchedalmond;
+                        }
+                        .segment-body {
+                            display: flex;
+                            flex-direction: row;
+                            align-content: space-between;
+                            align-items: flex-start;
+                            background-color: white;
+                        }
+                        .weather-start-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: #3399ff;
+                                padding: 0.625rem;
+                                li {
+                                    background: #cce5ff;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            }
+                            
+                        }
+                        .weather-final-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            margin-left: 0.18rem;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: mistyrose;
+                                padding: 0.625rem;
+                                li {
+                                    background: #f5cea8;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            };
+                            img {
+                                width:"5.62rem";
+                                height:"5.62rem";
+                            }
+                            
+                        }
+    
+                    }
+                }
+                
+                
+            }
+        }
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    
+        section {
+    
+                }
+    }
+    
+    section {
+        width: 90vw;
+        margin: 0.31rem auto;
+    
+        strong {
+            font-size: 2.1rem;
+            color: darkblue;
+               }
+          }
+    
+    .container {
+        margin-top: 5.3rem;
+        margin-top:0.3rem;
+        display: flex;
+        border: 0px;
+        padding: 0.31rem;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'MyFont';
+        //background: url('./icon.png');
+    }
+     
+    
+}
+
+@media(min-width: 600px) and (max-width: 900px) {
+    body {
+        font-size: 1.6rem;
+    }
+    section {
+        margin: 0px;
+        padding: 0px;
+        #trips-fields {
+            border:black 2px solid;
+            padding:1em;
+            legend {
+                //margin-left: 25rem;
+                #added-trips {
+                    background-color: aquamarine;
+                }
+            }
+            .trips-fields-inputs {
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   align-content: flex-start;
+                   #trip-number {
+                    width:9.3rem;
+                   }
+                   
+            }
+        }
+        #trips-fields-list {
+            border:black 2px solid;
+            padding:0.625rem;
+        }
+        #city {
+            width:12.5rem;
+           }
+           #departure {
+            width:12.25rem;
+           }
+        #add-trip-btn {
+          background-color: blue;
+          color:white;
+          font-size: 0.87rem;
+          font-family: 'Courier New', Courier, monospace;
+          &:hover {
+                cursor: pointer;
+                background-color: darkorange;
+                   }
+        }
+        #add-segment-btn {
+            background-color: blue;
+            color:white;
+            font-size: 0.87rem;
+            font-family: 'Courier New', Courier, monospace;
+    
+        }
+        #list-trips {
+           
+            .trip-details-item {
+                margin: 0;
+                
+                .trip-wrapper {
+                    $length-trip: width;
+                    border-radius: 0.31rem;
+                    border: red 2px dotted;
+                    padding:0.31rem;
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    align-content:space-between;
+                    align-items: center;
+                    span.total {
+                        border-radius: 0.31rem;
+                        
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        background-color: rgba(51, 51, 49, 0.55);
+                        color: rgb(247, 240, 240);
+                        float: right;
+                        margin-left: auto; 
+                        margin-right: 0px;
+                        height:1.25rem;
+                        width:1.25rem;
+                        text-align: center;
+                    }
+                    .segment-wrapper {
+                        display: flex;
+                        padding-left: 0.625rem;
+                        padding-right: 0.625rem;
+                        flex-direction: column;
+                        align-content:space-between;
+                        align-items: center;
+                        .segment-header {
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            width:100%;
+                            height:1.25rem;
+                            background-color: blanchedalmond;
+                        }
+                        .segment-body {
+                            display: flex;
+                            flex-direction: row;
+                            align-content: space-between;
+                            align-items: flex-start;
+                            background-color: white;
+                        }
+                        .weather-start-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: #3399ff;
+                                padding: 0.625rem;
+                                li {
+                                    background: #cce5ff;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            }
+                            
+                        }
+                        .weather-final-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            margin-left: 0.18rem;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: mistyrose;
+                                padding: 0.625rem;
+                                li {
+                                    background: #f5cea8;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            };
+                            img {
+                                width:"1.62rem";
+                                height:"1.62rem";
+                            }
+                            
+                        }
+    
+                    }
+                }
+                
+                
+            }
+        }
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    
+        section {
+    
+                }
+    }
+    
+    section {
+        width: 90vw;
+        margin: 0.31rem auto;
+    
+        strong {
+            font-size: 2.1rem;
+            color: darkblue;
+               }
+          }
+    
+    .container {
+        margin-top:0.3rem;
+       margin-top: 5.3rem;
+        display: flex;
+        border: 0px;
+        padding: 0.31rem;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'MyFont';
+        //background: url('./icon.png');
+    }
+     
+     
+    
+}
+@media(min-width: 901px) {
+    body {
+        font-size: 1.6rem;
+    }
+    section {
+        margin: 0px;
+        padding: 0px;
+        #trips-fields {
+            border:black 2px solid;
+            padding:1em;
+            legend {
+                //margin-left: 25rem;
+                #added-trips {
+                    background-color: aquamarine;
+                }
+            }
+            .trips-fields-inputs {
+                   display: flex;
+                   flex-direction: row;
+                   align-items: center;
+                   align-content: flex-start;
+                   #trip-number {
+                    width:9.3rem;
+                   }
+            }
+        }
+        #trips-fields-list {
+            border:black 2px solid;
+            padding:0.625rem;
+        }
+        #city {
+            width:12.5rem;
+           }
+           #departure {
+            width:12.5rem;
+           }
+        #add-trip-btn {
+          background-color: blue;
+          color:white;
+          font-size: 0.87rem;
+          font-family: 'Courier New', Courier, monospace;
+          &:hover {
+                cursor: pointer;
+                background-color: darkorange;
+                   }
+        }
+        #add-segment-btn {
+            background-color: blue;
+            color:white;
+            font-size: 0.87rem;
+            font-family: 'Courier New', Courier, monospace;
+    
+        }
+        #list-trips {
+           
+            .trip-details-item {
+                margin: 0;
+                
+                .trip-wrapper {
+                    $length-trip: width;
+                    border-radius: 0.31rem;
+                    border: red 2px dotted;
+                    padding:0.31rem;
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    align-content:space-between;
+                    align-items: center;
+                    span.total {
+                        border-radius: 0.31rem;
+                        
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: bold;
+                        background-color: rgba(51, 51, 49, 0.55);
+                        color: rgb(247, 240, 240);
+                        float: right;
+                        margin-left: auto; 
+                        margin-right: 0px;
+                        height:1.25rem;
+                        width:1.25rem;
+                        text-align: center;
+                    }
+                    .segment-wrapper {
+                        display: flex;
+                        padding-left: 0.625rem;
+                        padding-right: 0.625rem;
+                        flex-direction: column;
+                        align-content:space-between;
+                        align-items: center;
+                        .segment-header {
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            width:100%;
+                            height:3.25rem;
+                            background-color: blanchedalmond;
+                        }
+                        .segment-body {
+                            display: flex;
+                            flex-direction: row;
+                            align-content: space-between;
+                            align-items: flex-start;
+                            background-color: white;
+                        }
+                        .weather-start-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: #3399ff;
+                                padding: 0.625rem;
+                                li {
+                                    background: #cce5ff;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            }
+                            
+                        }
+                        .weather-final-date {
+                            border:blue 0.125rem solid;
+                            display: flex;
+                            flex-direction: column;
+                            align-content:flex-start;
+                            align-items: center;
+                            margin-left: 0.18rem;
+                            .weather-infos {
+                                list-style-type: circle;
+                                background: mistyrose;
+                                padding: 0.625rem;
+                                li {
+                                    background: #f5cea8;
+                                    color: darkblue;
+                                    margin: 0.625rem;
+                                  }
+                            };
+                            img {
+                                width:"1.62rem";
+                                height:"1.62rem";
+                            }
+                            
+                        }
+    
+                    }
+                }
+                
+                
+            }
+        }
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    
+        section {
+    
+                }
+    }
+    
+    section {
+        width: 90vw;
+        margin: 0.31rem auto;
+    
+        strong {
+            font-size: 2.1rem;
+            color: darkblue;
+               }
+          }
+    
+    .container {
+        position: relative;
+        margin-top:5.3rem;
+        display: flex;
+        border: 0px;
+        padding: 0.31rem;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'MyFont';
+        //background: url('./icon.png');
+    }
+     
+    
+}
+
+

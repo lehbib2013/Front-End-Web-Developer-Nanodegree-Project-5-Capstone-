@@ -1,16 +1,17 @@
 // Import the js file to test for ES 2015
-import "regenerator-runtime/runtime.js";
+// import "regenerator-runtime/runtime.js";
 // Import the js file to test
-import { submitHandler } from "../src/client/js/submitHandler"
+import {getLatLonInfos} from '../client/js/getLatLonData';
+// const { getLatLonInfos} = require('../client/js/getLatLonData');
 // The describe() function takes two arguments - a string description, and a test suite as a callback function.  
 // A test suite may contain one or more related tests    
-describe("Testing the submit functionality", () => {
+describe("Testing the getLatLon functionality", () => {
     // The test() function has two arguments - a string description, and an actual test as a callback function.  
-    test("Testing the handleSubmit() function", () => {
+    test("Testing the nameChecker() function", () => {
         // Define the input for the function, if any, in the form of variables/array
         // Define the expected output, if any, in the form of variables/array
         // The expect() function, in combination with a Jest matcher, is used to check if the function produces the expected output
         // The general syntax is `expect(myFunction(arg1, arg2, ...)).toEqual(expectedValue);`, where `toEqual()` is a matcher
-        expect(submitHandler).toBeDefined();
-    })
+        expect(getLatLonInfos).toBeDefined();
+    });
 });

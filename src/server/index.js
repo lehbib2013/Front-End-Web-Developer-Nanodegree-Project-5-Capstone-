@@ -39,7 +39,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('dist/index.html'))
 })
 
-app.get('/getTrips', async(req,res) => {
+const getTrips = app.get('/getTrips', async(req,res) => {
       res.send(arraySavedTrips);
 })
 app.get('/findLatLonInfos',async (req, res) => {
